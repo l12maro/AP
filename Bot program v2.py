@@ -167,3 +167,16 @@ print("Naive Bayes accuracy on new_test_data:", metrics.accuracy_score(label_pre
 test_tweets = vectorizer.transform(new_test_corpus).toarray()
 label_pred_3 = SVM_classifier.predict(test_tweets)
 print("SVM accuracy on new_test_data:", metrics.accuracy_score(label_pred_3, new_testing_labels))
+
+"""
+Output on my machine:
+Training Data size 2880
+Testing Data size 1240
+Logistic Regression accuracy on training_data: 0.8911290322580645
+Naive Bayes accuracy on training_data: 0.7709677419354839
+SVM accuracy on training_data: 0.917741935483871
+New Testing Data size 2640
+Logistic Regression accuracy on new_test_data: 0.9113636363636364
+Naive Bayes accuracy on new_test_data: 0.7988636363636363
+SVM accuracy on new_test_data: 0.9083333333333333
+"""
